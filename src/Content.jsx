@@ -1,4 +1,4 @@
-import { FaTrashAlt } from 'react-icons/fa';
+import ItemList from './ItemList';
 
 const Content = ({ items, handleCheck, handleDelete }) => {
 
@@ -6,30 +6,12 @@ const Content = ({ items, handleCheck, handleDelete }) => {
     <main>
       {items.length ? (
 
-        <ul>
-          {items.map((item) => (
-            <li className="item" key={item.id}>
-              
-              <input
-                type="checkbox"
-                onChange={() => handleCheck(item.id)}
-                checked={item.checked}
-              />
+        <ItemList
+          items={items}
+          handleCheck={handleCheck}
+          handleDelete={handleDelete}>
+        </ItemList>
 
-              <label
-                style={(item.checked) ? {textDecoration: 'line-through'} : null}
-                onDoubleClick={() => handleCheck(item.id)}
-              >{item.item}</label>
-
-              <FaTrashAlt
-                onClick={() => handleDelete(item.id)}
-                role='button'
-                tabIndex='0'>
-              </FaTrashAlt>
-
-            </li>
-          ))}
-        </ul>
       ) : <p>No items on the grocery list.</p>
     }  
     </main>
