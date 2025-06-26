@@ -1,0 +1,43 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.squareContainer {
+  border: 3px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.5);
+
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;    /* Centers content vertically */
+  height: 250px;
+  width: 250px;
+}
+
+.inputColorValue {
+  margin-top: 10px;
+  padding: 5px;
+
+  width: 250px;
+  font-size: 1rem;
+
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.5);
+}
+
+.inputForm label {
+  position: absolute;
+  left: -99999px;
+}
+
+.inputForm button {
+  color: black;
+  width: 250px;
+  margin-top: 10px;
+  transition: background 0.5s;
+  box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.5);
+}
+
+.inputForm button:hover {
+  background-color: var(--your-dynamic-color, #ccc);
+}
